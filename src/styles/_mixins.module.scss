@@ -1,0 +1,7 @@
+@import './variables.module';
+
+@mixin media {
+    @media screen and (max-width: $maxWidth) {
+        @content
+    }
+}

@@ -1,0 +1,79 @@
+@import '../../styles/variables.module.scss', '../../styles/mixins.module';
+$modileWidth: 100%;
+$mobileFlexDirection: column;
+
+@mixin buttons ($color, $marginLeft) {
+    @if $marginLeft { 
+        margin-left: $marginLeft;
+    }
+
+    background-color: $color;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    margin: (0px 10px) {
+        top: 35px;
+    }
+
+    @include media {
+        flex-direction: $mobileFlexDirection;
+        align-items: center;
+    }
+}
+
+h1 {
+    width: 50%;
+    margin: 0px;
+    font-weight: lighter;
+    color: $gray; 
+
+    @include media {
+        width: $modileWidth;
+    }
+}
+
+.TextContent {
+    width: 40%;
+    color: $gray;
+    font-size: 18px; 
+
+    @include media {
+        width: $modileWidth;
+        display: flex;
+        flex-direction: $mobileFlexDirection;
+    }
+}
+
+%Buttons { 
+    height: 30px;
+    width: 130px;
+    text-align: left;
+    color: $white;
+    font-size: 8px;
+    border: none {
+        radius: 0%;
+    }
+
+    @include media {
+        width: $modileWidth;
+    }
+}
+
+.Primary {
+    @include buttons($color: $blue, $marginLeft: null);
+    @extend %Buttons;
+}
+
+.Secondary {
+    @include buttons($color: $gray, $marginLeft: 10px);
+    @extend %Buttons;
+
+    @include media {
+        margin: {
+            left: 0px;
+            top: 10px
+        }
+    }
+}

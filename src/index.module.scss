@@ -1,0 +1,10 @@
+$width: 100%;
+
+body {
+    margin: 0;
+    width: $width;
+
+    #root {
+        width: $width
+    }
+}
