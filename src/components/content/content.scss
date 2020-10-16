@@ -1,0 +1,29 @@
+@import 'carbon-components/scss/components/button/button';
+
+.page_content__content {
+    margin: {
+        top: $spacing-04;
+        bottom: $spacing-04;
+    }
+}
+
+.bx--btn {
+    margin-right: 10px;
+    width: 200px;
+    @media(max-width: 1055px) {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: $spacing-04;
+    }
+}
+
+.page_content__text, .bx--row .page_content__button {
+    padding: 0 1rem;
+}
+
+.bx--row .page_content__button {
+    @media(max-width: 1055px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
